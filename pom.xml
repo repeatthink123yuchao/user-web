@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cdxh</groupId>
+	<artifactId>javase</artifactId>
+	
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- 编译 -->
+	<build>
+		<defaultGoal>compile</defaultGoal>
+		<finalName>page</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<!-- 发布管理 -->
+	<distributionManagement>
+		<!-- 发布仓库 -->
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://127.0.0.1:8888/repository/maven-releases</url>
+		</repository>
+		<!-- 快照仓库 -->
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshot</name>
+			<url>http://127.0.0.1:8888/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+
+
+
+
+</project>
